@@ -1,0 +1,267 @@
+@import 'colors.css';
+::selection{
+  background-color: white;
+  color: black;
+}
+body{
+  background-image: url("../images/background3.jpeg");
+  background-size:cover;
+  background-position: top;
+  font-family: 'Space Grotesk', sans-serif;
+  /* font-size: 1.1vw; */
+  overflow: hidden;
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+/* navigatie blok waar zowel het externe linken paneel als de interne linken gaan in komen */
+nav{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-bottom: var(--line-color) 1px solid;
+  box-shadow: 0 3px 3px black;
+  /* height: 11vh; */
+}
+/* paneel voor externe linken dat standaard verborgen wordt */
+.panel{
+  display: flex;
+  position: relative;
+  right: 40vw;
+  flex-direction: row-reverse;
+  width: 50vw;
+  height: 75px;
+  transition: right 3s;
+  white-space: nowrap; 
+  margin-right: 0;
+}
+.panel:hover{
+  right: 0;
+  transition: all 1.5s;
+}
+
+.panel li{
+  list-style: none;
+}
+.panel a{
+  text-decoration: none;
+  color: var(--text-color);
+  height: 100%;
+  width: 100%;
+}
+
+.links{
+  border: solid 2px var(--line-color);
+  border-radius: 3px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  min-width:min-content;
+  height: 50px;
+}
+/* Het stukje van de panel dat zichtbaar moet blijven */
+.grip{
+  width: 120px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 3px;
+  color: var(--text-color);
+  padding: 20px 20px 20px 20px;
+}
+nav ul{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 0;
+}
+nav ul li{
+  list-style: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+nav ul a{
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 3px;
+  color: var(--text-color);
+  padding: 20px 20px 20px 20px;
+}
+nav a:not(.current):hover, .grip:hover{
+  color: var(--current-nav-color);
+}
+.current{
+  color: var(--current-nav-text-color);
+  background-color: var(--current-nav-color);
+  position: relative;
+  top: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  box-shadow: 2px 2px 3px;
+}
+main{
+  color: var(--text-color);
+  margin-top: 5px;
+}
+
+.sections{
+  position: absolute;
+  bottom: 3px;
+  left: 0px;
+}
+.sections ul{
+  margin-bottom: 5px;
+  display: flex;
+}
+.sections li{
+  display: flex;
+  margin-left: 50px;
+  text-decoration: none;
+  list-style-type: none;
+  border: solid var(--line-color) 1px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px black;
+}
+.sections a{
+  flex-shrink: 0;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 3px;
+  color: var(--text-color);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.sections li:hover{
+  position: relative;
+  bottom: 1px;
+}
+.sections li:hover a{
+  color: var(--current-nav-color);
+}
+
+.sections li:active{
+box-shadow: -2px -2px 3px black;
+}
+
+.clear-float{
+  clear: both;
+}
+.scroll-container{
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  /* overflow-y: hidden; */
+}
+.scroll-item{
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 100vw;
+  height: 85vh ;
+  display: flex;
+  align-items: center;
+}
+#start{
+  display: flex;
+  align-items: center;
+}
+.center{
+  flex: 1;
+  text-align: center;
+}
+#home #what-else .scroll-content{
+  display: flex;
+  align-items: center;
+}
+
+.hobby-logo{
+  width: 200px;
+  flex: 1;
+}
+.hobby-logo img{
+    width: 200px;
+    border-radius: 20px;
+}
+
+.intro-image{
+  margin-top: 40px;
+  width: 350px;
+  border-radius: 10px;
+}
+.important{
+  color: var(--important-color);
+  font-weight: bold;
+}
+
+h2{
+  color: var(--header-color);
+  font-size:20px;
+  margin-left:10px;
+  margin-top: 10px;
+}
+footer p{
+  position: fixed;
+  bottom: 3px;
+  right: 5px;
+  background-color: var(--footer-background-color);
+  color: var(--footer-color);
+  z-index: 1;
+}
+
+.left-margin{
+  height: 100%;
+  flex: 1;
+}
+.left{
+  height: 80px;
+  position: relative;
+  right: 0;
+}
+.left-link{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.left-margin:hover .left{
+  right: 30px;
+  transition:right 1.5s;
+}
+.right-margin{
+  height: 100%;
+  flex: 1;
+}
+.right{
+  height: 80px;
+  position: relative;
+  left: 0;
+}
+.right-link{
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-margin:hover .right{
+  left: 30px;
+  transition: left 1.5s;
+}
+.scroll-content{
+  flex: 7;
+}
+
+.left-margin:active{
+  position:relative;
+  right: 10px;
+}
+.right-margin:active{
+  position:relative;
+  left: 10px;
+}
+.center-flex{
+  display: flex;
+  justify-content: center;
+}

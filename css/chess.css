@@ -1,0 +1,51 @@
+@import 'colors.css';
+
+#more .scroll-content{
+  display: flex;
+  align-items: center;
+}
+
+table{
+  border-collapse: collapse;
+  margin: auto;
+  table-layout: fixed;
+  flex: 1;
+}
+
+h2{
+  flex: 1;
+  font-size: 25px;
+}
+
+td{
+  border: solid black 1px;
+  background-color: var(--line-color);
+  text-align: center;
+  width: 4vw;
+  height: 4vw;
+}
+
+td img{
+  margin: 0;
+  height: 90%;
+}
+
+.dark{
+  background-color:var(--chess-color);
+}
+.chess{
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+iframe{
+  width: 700px; 
+  height: 410px;
+  padding: 0;
+}
+.chess-com{
+  overflow: hidden;
+  width: 680px; 
+  height: 390px;
+  border-radius: 20px;
+}

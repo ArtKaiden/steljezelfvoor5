@@ -1,0 +1,19 @@
+@import 'colors.css';
+
+.image-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 84vh;
+}
+figure img{
+  height: 100%;
+  border-radius: 20px;
+}
+figure{
+  margin: 5px;
+  max-height: 38vh;
+}
+iframe{
+  border-radius: 20px;
+}

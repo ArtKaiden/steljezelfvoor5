@@ -1,0 +1,64 @@
+@import 'colors.css';
+
+h2{
+  margin-bottom: 5px;
+}
+table{
+  border: solid 2px var(--line-color);
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+th{
+  background-color: rgb(111, 111, 111);
+  color: var(--text-color);
+}
+td{
+  border: solid 2px var(--line-color);
+  color: var(--important-color);
+  text-align: center;
+}
+td a{
+  text-decoration: none;  
+  color: var(--important-color);
+  text-align: center;
+}
+.rowEven{
+    background-color: rgb(75, 75, 75);
+}
+.rowOdd{
+  background-color: rgb(48, 48, 48);
+}
+.empty{
+  border-top: none;
+  border-bottom: none;
+}
+.secondTable td{
+  border: none;
+}
+.image-container{
+  display: flex;
+}
+figure{
+  flex: 1;
+}
+figure img{
+  max-width: 100%;
+  border-radius: 20px;
+}
+.course:hover{
+  color: var(--header-color);
+  padding: 0;
+  border-style: dashed;
+  transition: color 0.5s;
+}
+.course:hover a{
+  color: var(--header-color);
+  transition: color 0.5s;
+}
+.table-container{
+  width: 900px;
+  border: solid var(--line-color) 3px;
+  border-radius: 20px;
+  overflow: hidden;
+}
